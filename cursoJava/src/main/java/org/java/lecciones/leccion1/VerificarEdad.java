@@ -1,8 +1,8 @@
 package org.java.lecciones.leccion1;
 
 /**
- * Este programa verifica si una persona es mayor o menor de edad basado en su
- * edad. Muestra un mensaje en función del resultado de la verificación.
+ * Este programa verifica si una persona es mayor o menor de edad. Muestra un
+ * mensaje en función del resultado de la verificación.
  *
  * @author Sebastian Godinez Borja
  */
