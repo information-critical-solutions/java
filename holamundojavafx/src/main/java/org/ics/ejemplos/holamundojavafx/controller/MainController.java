@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.TextField;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,12 +25,17 @@ public class MainController implements Initializable {
     @FXML
     private Button buttonPresioname;
 
+    @FXML
+    private TextField textA;
+
+    @FXML
+    private TextField textB;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         buttonPresioname.setOnAction((t) -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             DialogPane dialogPane = alert.getDialogPane();
-//                            dialogPane.getStylesheets().add(getClass().getResource("/styles/dark_theme.css").toExternalForm());
             dialogPane.getStyleClass().add("confirmation-dialog");
             alert.setTitle("Hola mundo ");
             alert.setHeaderText("Hola mundo");

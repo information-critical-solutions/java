@@ -10,35 +10,20 @@ public class NombreDiaSemana {
 
     public static void main(String[] args) {
         // Definición del valor numérico que representa un día de la semana
-        int diaSemana = 3;
+        int diaSemana = 5;
         String nombreDia;
 
         // Utilizando switch para asignar nombres a los días de la semana
-        switch (diaSemana) {
-            case 1:
-                nombreDia = "Lunes";
-                break;
-            case 2:
-                nombreDia = "Martes";
-                break;
-            case 3:
-                nombreDia = "Miércoles";
-                break;
-            case 4:
-                nombreDia = "Jueves";
-                break;
-            case 5:
-                nombreDia = "Viernes";
-                break;
-            case 6:
-                nombreDia = "Sábado";
-                break;
-            case 7:
-                nombreDia = "Domingo";
-                break;
-            default:
-                nombreDia = "Día no válido";
-        }
+        nombreDia = switch (diaSemana) {
+            case 1 -> "Lunes";
+            case 2 -> "Martes";
+            case 3 -> "Miércoles";
+            case 4 -> "Jueves";
+            case 5 -> "Viernes";
+            case 6 -> "Sábado";
+            case 7 -> "Domingo";
+            default -> "Día no válido";
+        };
 
         // Imprime el resultado de la asignación del nombre del día de la semana
         System.out.println("El día de la semana es: " + nombreDia);
