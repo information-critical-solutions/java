@@ -1,5 +1,6 @@
 package org.java.lecciones.leccion2;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 /**
