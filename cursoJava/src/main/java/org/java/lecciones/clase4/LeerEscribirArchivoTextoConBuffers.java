@@ -7,14 +7,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
+ * Ejemplo de lectura y escritura de archivos de texto utilizando BufferedReader
+ * y BufferedWriter. El programa lee un archivo de entrada línea por línea y lo
+ * imprime en la consola. Luego, escribe contenido en un archivo de salida.
  *
  * @author Sebastian Godinez Borja
  */
 public class LeerEscribirArchivoTextoConBuffers {
 
     public static void main(String[] args) {
-        String archivoEntrada = "entrada.txt";
-        String archivoSalida = "salida.txt";
+        String archivoEntrada = "entrada.txt"; // Nombre del archivo de entrada
+        String archivoSalida = "salida.txt";   // Nombre del archivo de salida
 
         // Leer el archivo de entrada usando BufferedReader
         try ( BufferedReader br = new BufferedReader(new FileReader(archivoEntrada))) {
@@ -29,7 +32,7 @@ public class LeerEscribirArchivoTextoConBuffers {
         // Escribir en el archivo de salida usando BufferedWriter
         try ( BufferedWriter bw = new BufferedWriter(new FileWriter(archivoSalida))) {
             String contenido = "Este es un ejemplo de escritura en un archivo de texto.\n";
-            bw.write(contenido);
+            bw.write(contenido); // Escribir el contenido en el archivo
             System.out.println("\nContenido escrito en el archivo de salida.");
         } catch (IOException e) {
             e.printStackTrace();
