@@ -1,6 +1,6 @@
+package org.java.lecciones.clase4.serializacion.personalizada;
 
 import java.io.*;
-import org.java.lecciones.clase4.serializacion.personalizada.Empleado;
 
 /**
  * Clase principal para la serialización y deserialización de objetos Empleado.
