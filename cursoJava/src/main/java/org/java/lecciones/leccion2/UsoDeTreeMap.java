@@ -1,5 +1,6 @@
 package org.java.lecciones.leccion2;
 
+import java.util.Map;
 import java.util.TreeMap;
 
 /**
@@ -13,7 +14,7 @@ public class UsoDeTreeMap {
 
     public static void main(String[] args) {
         // Crear un TreeMap para almacenar nombres y edades
-        TreeMap<String, Integer> edades = new TreeMap<>();
+        Map<String, Integer> edades = new TreeMap<>();
 
         // Agregar elementos al TreeMap
         edades.put("David", 22);

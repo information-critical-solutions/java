@@ -1,6 +1,5 @@
 package org.java.lecciones.leccion2;
 
-import java.util.Comparator;
 import java.util.TreeSet;
 
 /**
@@ -25,6 +24,7 @@ public class UsoDeTreeSet {
 
         // Crear un TreeSet de strings en orden descendente
         TreeSet<String> palabrasDescendentes = new TreeSet<>((s1, s2) -> s2.compareTo(s1));
+//        TreeSet<String> palabrasDescendentes = new TreeSet<>((o1, o2) -> o2.compareTo(o1));
         palabrasDescendentes.add("manzana");
         palabrasDescendentes.add("banana");
         palabrasDescendentes.add("pera");

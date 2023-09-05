@@ -1,6 +1,7 @@
 package org.java.lecciones.leccion2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Clase que demuestra el uso básico de la clase ArrayList en Java. Se crean,
@@ -13,7 +14,7 @@ public class UsoDeArrayList {
 
     public static void main(String[] args) {
         // Crear un ArrayList de enteros
-        ArrayList<Integer> numeros = new ArrayList<>();
+        List<Integer> numeros = new ArrayList<>();
 
         // Agregar elementos al ArrayList
         numeros.add(10);

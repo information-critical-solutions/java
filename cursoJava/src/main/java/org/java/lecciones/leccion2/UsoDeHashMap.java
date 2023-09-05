@@ -1,6 +1,7 @@
 package org.java.lecciones.leccion2;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Clase que ejemplifica el uso básico de HashMap en Java, incluyendo su
@@ -15,7 +16,7 @@ public class UsoDeHashMap {
 
     public static void main(String[] args) {
         // Declaración e inicialización de un HashMap de nombres y edades
-        HashMap<String, Integer> edades = new HashMap<>();
+        Map<String, Integer> edades = new HashMap<>();
 
         // Agregar elementos al HashMap
         edades.put("Alice", 25);
@@ -32,6 +33,19 @@ public class UsoDeHashMap {
             System.out.println("No se encontró la edad de David.");
         }
 
+        // Iterar a través del HashMap usando un bucle for-each
+        System.out.println("Nombres y edades en el HashMap:");
+        for (String nombre : edades.keySet()) {
+            int edad = edades.get(nombre);
+            System.out.println(nombre + ": " + edad + " años");
+        }
+        
+        
+        // Iterar a través del HashMap usando un bucle for-each
+        System.out.println("Nombres y edades en el HashMap:");
+        for (String nombre : edades.keySet()) {
+            edades.put(nombre, 0);
+        }
         // Iterar a través del HashMap usando un bucle for-each
         System.out.println("Nombres y edades en el HashMap:");
         for (String nombre : edades.keySet()) {

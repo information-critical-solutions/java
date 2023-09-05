@@ -11,7 +11,7 @@ public class UsoDeQueue {
 
     public static void main(String[] args) {
         // Crear una cola utilizando LinkedList
-        Queue<String> cola = new LinkedList<>();
+        LinkedList<String> cola = new LinkedList<>();
 
         // Agregar elementos a la cola
         cola.offer("Manzana");
@@ -28,6 +28,10 @@ public class UsoDeQueue {
 
         // Acceder al primer elemento sin eliminarlo
         String primerElemento = cola.peek();
+        
         System.out.println("Primer elemento en la cola: " + primerElemento); // Salida: Primer elemento en la cola: Banana
+        
+        String get = cola.get(0);
+        System.out.println("Primer elemento en la cola: " + get); // Salida: Primer elemento en la cola: Banana
     }
 }

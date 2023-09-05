@@ -1,6 +1,7 @@
 package org.java.lecciones.leccion2.ejercicio;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ public class DiccionarioTecnico {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        HashMap<String, String> diccionario = new HashMap<>();
+        Map<String, String> diccionario = new HashMap<>();
 
         while (true) {
             System.out.println("----------------------------------------");
