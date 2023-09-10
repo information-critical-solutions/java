@@ -11,8 +11,8 @@
         <maven.compiler.target>20</maven.compiler.target>
         <exec.mainClass>org.java.lecciones.leccion1.Leccion1</exec.mainClass>
     </properties>
-    
-        <dependencies>
+
+    <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -25,7 +25,7 @@
         </dependency>
     </dependencies>
     
-<!--    <build>
+    <!--    <build>
         <plugins>
             <plugin> 
                 <groupId>org.apache.maven.plugins</groupId>

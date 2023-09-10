@@ -1,4 +1,3 @@
-
 package org.ics.ejemplos.holamundojavafx;
 
 /**

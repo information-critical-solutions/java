@@ -10,6 +10,7 @@ class ImprimirImpares implements Runnable {
     /**
      * Método run() que se ejecutará cuando el hilo comience.
      */
+    @Override
     public void run() {
         for (int i = 1; i <= 9; i += 2) {
             System.out.println("Impar: " + i); // Imprime números impares
