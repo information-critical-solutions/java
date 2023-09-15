@@ -23,8 +23,8 @@ public class ByteArrayReadWriteExample {
 
     public static void main(String[] args) {
         // Ejemplo de datos para escribir en el arreglo de bytes
-        short tipoOperacion = 1; // Tipo de operación (por ejemplo, 1 para "suma")
-        byte[] datos = {10, 20, 30, 40, 50}; // Datos a enviar
+        short tipoOperacion = 1; // Tipo de operación (por ejemplo, 1 para "suma") <- header
+        byte[] datos = {10, 20}; // Datos a enviar <- data del servicio
         // Escribir los datos en un arreglo de bytes
         byte[] bytes = escribirDatos(tipoOperacion, datos);
         // Leer los datos desde el arreglo de bytes
@@ -48,7 +48,6 @@ public class ByteArrayReadWriteExample {
             dataOutputStream.write(datos);
             // Obtener el arreglo de bytes resultante
             return byteArrayOutputStream.toByteArray();
-
         } catch (IOException e) {
             LOGGER.error("Error al escribir datos en el arreglo de bytes: " + e.getMessage());
             return null;

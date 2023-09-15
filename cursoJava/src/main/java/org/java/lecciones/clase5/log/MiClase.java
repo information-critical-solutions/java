@@ -14,24 +14,24 @@ import org.apache.logging.log4j.Logger;
 public class MiClase {
 
     // Obtiene una instancia de Logger específica para esta clase
-    private static final Logger logger = LogManager.getLogger(MiClase.class);
+    private static final Logger LOGGER = LogManager.getLogger(MiClase.class);
 
     public static void main(String[] args) {
         // Registra mensajes usando Log4j
 
         // Este es un mensaje de depuración (nivel de gravedad DEBUG)
-        logger.debug("Este es un mensaje de depuración.");
+        LOGGER.debug("Este es un mensaje de depuración.");
 
         // Este es un mensaje informativo (nivel de gravedad INFO)
-        logger.info("Este es un mensaje informativo.");
+        LOGGER.info("Este es un mensaje informativo.");
 
         // Este es un mensaje de advertencia (nivel de gravedad WARN)
-        logger.warn("Este es un mensaje de advertencia.");
+        LOGGER.warn("Este es un mensaje de advertencia.");
 
         // Este es un mensaje de error (nivel de gravedad ERROR)
-        logger.error("Este es un mensaje de error.");
+        LOGGER.error("Este es un mensaje de error.");
 
         // Este es un mensaje fatal (nivel de gravedad FATAL)
-        logger.fatal("Este es un mensaje fatal.");
+        LOGGER.fatal("Este es un mensaje fatal.");
     }
 }
