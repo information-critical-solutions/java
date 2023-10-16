@@ -4,3 +4,15 @@ holamundojava/.DS_Store
 *.log
 /leccion1/target/
 /cursoJava/target/
+/proyecto/nodo/target/
+/proyecto/cliente/target/
+/proyecto1/nodo/target/
+/proyecto1/cliente/target/
+/proyecto1/LibreriaComunicacion/target/
+
+/lunes/nodo/target/
+/lunes/cliente/target/
+/lunes/LibreriaComunicacion/target/
+/martes/nodo/target/
+/martes/cliente/target/
+/martes/LibreriaComunicacion/target/
