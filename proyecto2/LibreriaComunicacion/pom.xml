@@ -4,18 +4,13 @@
     
     <parent>
         <groupId>org.java.lecciones</groupId>
-        <artifactId>proyecto1</artifactId>
+        <artifactId>proyecto2</artifactId>
         <version>1.0.0</version>
     </parent>
     
-    <artifactId>cliente</artifactId>
+    <groupId>org.java.lecciones</groupId>
+    <artifactId>LibreriaComunicacion</artifactId>
     <packaging>jar</packaging>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
-        <exec.mainClass>org.java.lecciones.nodo.Nodo</exec.mainClass>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -25,15 +20,11 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>LibreriaComunicacion</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
-    <name>Cliente Base CD</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <exec.mainClass>org.java.lecciones.libreriacomunicacion.LibreriaComunicacion</exec.mainClass>
+    </properties>
 </project>

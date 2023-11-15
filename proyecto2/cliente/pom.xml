@@ -4,7 +4,7 @@
     
     <parent>
         <groupId>org.java.lecciones</groupId>
-        <artifactId>proyecto1</artifactId>
+        <artifactId>proyecto2</artifactId>
         <version>1.0.0</version>
     </parent>
     
@@ -35,5 +35,5 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
-    <name>Cliente Base CD</name>
+    <name>Cliente en malla</name>
 </project>

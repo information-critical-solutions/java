@@ -1,8 +1,5 @@
 package org.java.lecciones.cliente.controller;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -11,6 +8,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import org.java.lecciones.cliente.conexion.ConexionNodo;
 import org.java.lecciones.libreriacomunicacion.Mensaje;
+import org.java.lecciones.libreriacomunicacion.TipoOperacion;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Controlador de la página principal de la interfaz de usuario. Permite enviar
@@ -55,7 +57,7 @@ public class MainPageController implements Initializable {
                 return;
             }
             Mensaje m = new Mensaje();
-            m.setTipoOperacion((short) 1);
+            m.setTipoOperacion(TipoOperacion.SUMA);
             m.setDatos(mensaje.getBytes());
             try {
                 cn.enviarMensaje(m);
