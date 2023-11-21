@@ -27,11 +27,13 @@ public class PropertiesExample {
             String dbUrl = prop.getProperty("database.url");
             String dbUsername = prop.getProperty("database.username");
             String dbPassword = prop.getProperty("database.password");
+            String clase = prop.getProperty("clase");
 
             // Mostrar las configuraciones por pantalla
             System.out.println("Database URL: " + dbUrl);
             System.out.println("Database Username: " + dbUsername);
             System.out.println("Database Password: " + dbPassword);
+            System.out.println("Clase: " + clase);
         } catch (IOException e) {
             // Manejar cualquier excepción de entrada/salida (IOException)
             e.printStackTrace();
