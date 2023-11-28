@@ -21,7 +21,6 @@ public class Configuracion {
             // Manejar cualquier excepción de entrada/salida (IOException)
             e.printStackTrace();
         }
-
     }
 
     public static Configuracion getInstance() {
@@ -42,8 +41,14 @@ public class Configuracion {
         return prop.getProperty("host");
     }
 
-    public Integer getPort() {
-        String to = prop.getProperty("port");
+    public Integer getPortInicial() {
+        String to = prop.getProperty("portInicial");
         return Integer.valueOf(to);
     }
+
+    public Integer getPortFinal() {
+        String to = prop.getProperty("portFinal");
+        return Integer.valueOf(to);
+    }
+
 }

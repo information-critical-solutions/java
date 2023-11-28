@@ -35,8 +35,9 @@ public class Cliente extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         String host = Configuracion.getInstance().getHost();
-        Integer port = Configuracion.getInstance().getPort();
-        cn = new ConexionNodo(host, port);
+        Integer portInicial = Configuracion.getInstance().getPortInicial();
+        Integer portFinal = Configuracion.getInstance().getPortFinal();
+        cn = new ConexionNodo(host, portInicial);
         cn.conectar();
         mpc = new MainPageController(cn);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(PATH_FILE));
