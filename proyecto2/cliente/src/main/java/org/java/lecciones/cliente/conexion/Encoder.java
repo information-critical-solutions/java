@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import org.java.lecciones.cliente.config.Configuracion;
 
 /**
  * Clase que maneja la decodificación de mensajes y ejecuta acciones basadas en
@@ -40,6 +41,11 @@ public class Encoder implements Runnable {
             Mensaje mensajeRecibido;
             try {
                 mensajeRecibido = DecoderEncoder.leer(socket);
+                if(mensajeRecibido.getTipoOperacion().getTipo().compareTo(Configuracion.getInstance().getTipoOperacion()) != 0){
+                    continue;
+                }
+                
+                // se forma el mensaje en la cola de entrada
                 ProcesaMensaje procesaMensaje = acciones.getOrDefault(mensajeRecibido.getTipoOperacion(), (m) -> {
                     LOGGER.info("Mensaje recibido: " + m);
                 });

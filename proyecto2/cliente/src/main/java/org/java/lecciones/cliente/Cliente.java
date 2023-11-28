@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.java.lecciones.cliente.conexion.ConexionNodo;
+import org.java.lecciones.cliente.config.Configuracion;
 import org.java.lecciones.cliente.controller.MainPageController;
 
 /**
@@ -33,7 +34,9 @@ public class Cliente extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        cn = new ConexionNodo("localhost", 12345);
+        String host = Configuracion.getInstance().getHost();
+        Integer port = Configuracion.getInstance().getPort();
+        cn = new ConexionNodo(host, port);
         cn.conectar();
         mpc = new MainPageController(cn);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(PATH_FILE));

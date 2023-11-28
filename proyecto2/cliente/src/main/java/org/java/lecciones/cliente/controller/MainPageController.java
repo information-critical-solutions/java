@@ -13,6 +13,7 @@ import org.java.lecciones.libreriacomunicacion.TipoOperacion;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import org.java.lecciones.cliente.mensajes.GestorMS;
 
 /**
  * Controlador de la página principal de la interfaz de usuario. Permite enviar
@@ -59,11 +60,7 @@ public class MainPageController implements Initializable {
             Mensaje m = new Mensaje();
             m.setTipoOperacion(TipoOperacion.SUMA);
             m.setDatos(mensaje.getBytes());
-            try {
-                cn.enviarMensaje(m);
-            } catch (IOException ex) {
-                showAlert(Alert.AlertType.ERROR, "Enviando un mensaje", "Al escribir el mensaje sobre el socket");
-            }
+            GestorMS.getInstance().putMessage(m);
         });
 
         limpiarButton.setOnAction((t) -> {
