@@ -20,7 +20,8 @@ public class LeerEscribirArchivoTextoConBuffers {
         String archivoSalida = "salida.txt";   // Nombre del archivo de salida
 
         // Leer el archivo de entrada usando BufferedReader
-        try ( BufferedReader br = new BufferedReader(new FileReader(archivoEntrada))) {
+        try (FileReader fr = new FileReader(archivoEntrada); 
+                BufferedReader br = new BufferedReader(fr)) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea); // Imprimir cada línea en la consola
@@ -30,7 +31,8 @@ public class LeerEscribirArchivoTextoConBuffers {
         }
 
         // Escribir en el archivo de salida usando BufferedWriter
-        try ( BufferedWriter bw = new BufferedWriter(new FileWriter(archivoSalida))) {
+        try ( FileWriter fw = new FileWriter(archivoSalida); 
+                BufferedWriter bw = new BufferedWriter(fw)) {
             String contenido = "Este es un ejemplo de escritura en un archivo de texto.\n";
             bw.write(contenido); // Escribir el contenido en el archivo
             System.out.println("\nContenido escrito en el archivo de salida.");

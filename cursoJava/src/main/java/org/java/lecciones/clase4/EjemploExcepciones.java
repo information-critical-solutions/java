@@ -24,10 +24,10 @@ public class EjemploExcepciones {
 
     public static int dividir(int numerador, int denominador) {
         // Intentamos realizar la división
-        if (denominador == 0) {
-            // Lanzamos una excepción de tipo ArithmeticException si el denominador es cero
-            throw new ArithmeticException("División por cero no permitida.");
-        }
+//        if (denominador == 0) {
+//            // Lanzamos una excepción de tipo ArithmeticException si el denominador es cero
+//            throw new ArithmeticException("División por cero no permitida.");
+//        }
         return numerador / denominador;
     }
 }

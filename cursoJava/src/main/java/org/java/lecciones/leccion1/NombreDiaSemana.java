@@ -10,7 +10,7 @@ public class NombreDiaSemana {
 
     public static void main(String[] args) {
         // Definición del valor numérico que representa un día de la semana
-        int diaSemana = 5;
+        int diaSemana = 3;
         String nombreDia;
 
         // Utilizando switch para asignar nombres a los días de la semana

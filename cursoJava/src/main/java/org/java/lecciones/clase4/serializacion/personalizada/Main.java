@@ -16,7 +16,7 @@ public class Main {
         // Serializar el objeto a un archivo
         try ( ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("empleado.ser"))) {
             out.writeObject(empleado);
-            System.out.println("Objeto Empleado serializado con éxito.");
+            System.out.println("Objeto Empleado serializado con éxito. " + empleado);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -23,7 +23,7 @@ public class UsoDeTreeSet {
         System.out.println("Números en orden ascendente: " + numerosAscendentes); // Salida: Números en orden ascendente: [1, 2, 3, 5, 8]
 
         // Crear un TreeSet de strings en orden descendente
-        TreeSet<String> palabrasDescendentes = new TreeSet<>((s1, s2) -> s2.compareTo(s1));
+        TreeSet<String> palabrasDescendentes = new TreeSet<>();
 //        TreeSet<String> palabrasDescendentes = new TreeSet<>((o1, o2) -> o2.compareTo(o1));
         palabrasDescendentes.add("manzana");
         palabrasDescendentes.add("banana");

@@ -20,7 +20,7 @@ public class BucleDoWhile {
             // Incrementa el contador de intentos en 1 para la próxima iteración
             intentos++;
         } while (intentos < 3);
-        
+
         System.out.println("intentos " + intentos);
     }
 }

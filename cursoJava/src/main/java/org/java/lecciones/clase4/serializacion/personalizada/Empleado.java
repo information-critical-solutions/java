@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Declaración de la clase Empleado, que implementa la interfaz Serializable
@@ -54,4 +56,10 @@ public class Empleado implements Serializable {
         // Restaurar la edad al valor original después de deserializar (mitad)
         edad = in.readInt() / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "nombre=" + nombre + ", contrasena=" + contrasena + ", edad=" + edad + '}';
+    }
+
 }

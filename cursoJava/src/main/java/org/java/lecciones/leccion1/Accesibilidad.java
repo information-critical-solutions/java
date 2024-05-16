@@ -1,5 +1,7 @@
 package org.java.lecciones.leccion1;
 
+import org.java.lecciones.leccion2.ejercicio.NumerosPrimos;
+
 /**
  * Esta clase ilustra los diferentes niveles de accesibilidad en Java. Se
  * destacan los atributos y métodos con diversos niveles de acceso.
@@ -47,4 +49,5 @@ public class Accesibilidad {
     private void metodoPrivado() {
         // Código aquí
     }
+
 }

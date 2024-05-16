@@ -20,5 +20,6 @@ public class BucleWhile {
             // Incrementa el contador en 1 para la próxima iteración
             contador++;
         }
+        System.out.println("Contador: " + contador);
     }
 }

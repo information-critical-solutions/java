@@ -34,5 +34,6 @@ public class PromedioDeNumeros {
         System.out.println("El promedio de los números es: " + promedio);
 
         scanner.close();
+        
     }
 }
