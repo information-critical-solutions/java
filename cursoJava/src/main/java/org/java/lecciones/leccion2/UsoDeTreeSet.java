@@ -1,5 +1,6 @@
 package org.java.lecciones.leccion2;
 
+import java.util.Set;
 import java.util.TreeSet;
 
 /**
@@ -13,7 +14,7 @@ public class UsoDeTreeSet {
 
     public static void main(String[] args) {
         // Crear un TreeSet de números enteros en orden ascendente
-        TreeSet<Integer> numerosAscendentes = new TreeSet<>();
+        Set<Integer> numerosAscendentes = new TreeSet<>();
         numerosAscendentes.add(5);
         numerosAscendentes.add(2);
         numerosAscendentes.add(8);
@@ -23,8 +24,8 @@ public class UsoDeTreeSet {
         System.out.println("Números en orden ascendente: " + numerosAscendentes); // Salida: Números en orden ascendente: [1, 2, 3, 5, 8]
 
         // Crear un TreeSet de strings en orden descendente
-        TreeSet<String> palabrasDescendentes = new TreeSet<>();
-//        TreeSet<String> palabrasDescendentes = new TreeSet<>((o1, o2) -> o2.compareTo(o1));
+//        TreeSet<String> palabrasDescendentes = new TreeSet<>();
+        TreeSet<String> palabrasDescendentes = new TreeSet<>((o1, o2) -> o2.compareTo(o1));
         palabrasDescendentes.add("manzana");
         palabrasDescendentes.add("banana");
         palabrasDescendentes.add("pera");

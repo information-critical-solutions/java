@@ -15,12 +15,12 @@ public class BucleDoWhile {
         // Utilizando un bucle do-while para imprimir las iteraciones
         do {
             // Imprime un mensaje con el número de intento actual
-            System.out.println("Intento " + intentos);
+            System.out.println("Intento: " + intentos);
 
             // Incrementa el contador de intentos en 1 para la próxima iteración
             intentos++;
         } while (intentos < 3);
 
-        System.out.println("intentos " + intentos);
+        System.out.println("intentos final: " + intentos);
     }
 }

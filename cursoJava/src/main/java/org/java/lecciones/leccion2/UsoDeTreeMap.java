@@ -14,7 +14,7 @@ public class UsoDeTreeMap {
 
     public static void main(String[] args) {
         // Crear un TreeMap para almacenar nombres y edades
-        Map<String, Integer> edades = new TreeMap<>();
+        Map<String, Integer> edades = new TreeMap<>((o1, o2) ->  o2.compareTo(o1));
 
         // Agregar elementos al TreeMap
         edades.put("David", 22);

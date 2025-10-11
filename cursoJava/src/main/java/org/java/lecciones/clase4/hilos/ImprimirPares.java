@@ -1,11 +1,14 @@
 package org.java.lecciones.clase4.hilos;
 
+import java.net.Socket;
+
 /**
  * Clase que implementa la interfaz Runnable para imprimir números pares.
  *
  * @author Sebastian Godinez Borja
  */
 class ImprimirPares implements Runnable {
+
 
     /**
      * Método run() que se ejecutará cuando el hilo comience.

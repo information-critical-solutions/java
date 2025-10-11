@@ -5,7 +5,7 @@ package org.java.lecciones.clase4.hilos;
  *
  * @author Sebastian Godinez Borja
  */
-class ImprimirImpares implements Runnable {
+public class ImprimirImpares implements Runnable {
 
     /**
      * Método run() que se ejecutará cuando el hilo comience.

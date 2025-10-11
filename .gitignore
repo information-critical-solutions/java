@@ -21,3 +21,9 @@ holamundojava/.DS_Store
 /cargaDinamica/restar/target/
 proyecto2/cliente/target
 /estructuraBasicaSockets/LibreriaComunicacion/target/
+/computo/holamundojava/target/
+/computo/nodo/target/
+/computo/cliente/target/
+*.idea
+cripto/cripto/logs/*
+cripto/whatsup-client/logs/*

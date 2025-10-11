@@ -8,20 +8,20 @@ package org.java.lecciones.clase4;
  *
  * @author Sebastian Godinez Borja
  */
-public class InventarioInsuficiente extends Exception {
+public class NumeroException extends Exception {
 
-    public InventarioInsuficiente() {
+    public NumeroException() {
     }
 
-    public InventarioInsuficiente(String message) {
+    public NumeroException(String message) {
         super(message);
     }
 
-    public InventarioInsuficiente(String message, Throwable cause) {
+    public NumeroException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public InventarioInsuficiente(Throwable cause) {
+    public NumeroException(Throwable cause) {
         super(cause);
     }
 }

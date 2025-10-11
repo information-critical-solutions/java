@@ -1,6 +1,7 @@
 package org.java.lecciones.leccion2;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Clase que demuestra el uso básico de HashSet en Java, incluyendo su
@@ -14,12 +15,30 @@ public class UsoDeHashSet {
 
     public static void main(String[] args) {
         // Crear un HashSet de strings
-        HashSet<String> nombres = new HashSet<>();
+        Set<String> nombres = new HashSet<>();
 
         // Agregar elementos al HashSet
-        nombres.add("Alice");
         nombres.add("Bob");
+        nombres.add("Bob");
+        nombres.add("Bob");
+        nombres.add("Bob");
+        nombres.add("Alice");
+        nombres.add("Alice");
+        nombres.add("Alice");
+        nombres.add("Alice");
+        nombres.add("Alice");
+        nombres.add("David");
         nombres.add("Charlie");
+        nombres.add("Charlie");
+        nombres.add("Charlie");
+        nombres.add("Charlie");
+        nombres.add("Charlie");
+        nombres.add("David");
+        nombres.add("David");
+        nombres.add("David");
+        nombres.add("David");
+        nombres.add("David");
+        nombres.add("David");
         nombres.add("David");
         nombres.add("Bob"); // No se agregarán duplicados
 

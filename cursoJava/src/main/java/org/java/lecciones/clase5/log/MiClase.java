@@ -2,6 +2,7 @@ package org.java.lecciones.clase5.log;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.java.lecciones.leccion1.EstructuraBasica;
 
 /**
  * Esta es una clase de ejemplo que muestra cómo utilizar Log4j para registrar
@@ -33,5 +34,6 @@ public class MiClase {
 
         // Este es un mensaje fatal (nivel de gravedad FATAL)
         LOGGER.fatal("Este es un mensaje fatal.");
+
     }
 }

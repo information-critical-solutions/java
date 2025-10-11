@@ -10,9 +10,11 @@ public class BucleFor {
 
     public static void main(String[] args) {
         // Utilizando un bucle for para imprimir las iteraciones
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 100; i >= 15; i = i - 20) {
             // Imprime un mensaje con el número de iteración
             System.out.println("Iteración " + i);
         }
+
+
     }
 }

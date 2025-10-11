@@ -1,5 +1,6 @@
 package org.java.lecciones.leccion1.ejercicio;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**

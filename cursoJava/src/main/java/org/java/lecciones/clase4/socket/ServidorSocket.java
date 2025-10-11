@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Clase que implementa un servidor de sockets en Java. Escucha en un puerto
@@ -23,6 +27,7 @@ public class ServidorSocket {
 
             while (true) {
                 Socket cliente = servidor.accept(); // Aceptar una conexión entrante
+
                 System.out.println("Cliente conectado desde " + cliente.getInetAddress());
 
                 // Flujo de entrada para recibir datos del cliente
@@ -34,6 +39,7 @@ public class ServidorSocket {
 
                 // Cerrar el cliente
                 cliente.close();
+                System.out.println("Esperando al siguiente cliente desde  " + puerto);
             }
         } catch (IOException e) {
             e.printStackTrace();

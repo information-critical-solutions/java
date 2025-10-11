@@ -17,7 +17,7 @@ public class Persona implements Serializable {
      * Constructor de la clase Persona.
      *
      * @param nombre El nombre de la persona.
-     * @param edad La edad de la persona.
+     * @param edad   La edad de la persona.
      */
     public Persona(String nombre, int edad) {
         this.nombre = nombre;

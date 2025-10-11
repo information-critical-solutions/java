@@ -10,7 +10,7 @@ public class EjemploHilos {
 
     public static void main(String[] args) {
         // Crear dos objetos de la clase que implementa Runnable
-        Runnable imprimirPares = new ImprimirPares();
+        ImprimirPares imprimirPares = new ImprimirPares();
         Runnable imprimirImpares = new ImprimirImpares();
 
         // Crear dos hilos y asignarles las tareas

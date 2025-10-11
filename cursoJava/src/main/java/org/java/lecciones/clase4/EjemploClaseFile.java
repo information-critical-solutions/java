@@ -13,7 +13,7 @@ public class EjemploClaseFile {
 
     public static void main(String[] args) {
         // Crear un objeto File que representa un archivo existente
-        File archivo = new File("miarchivo.txt");
+        File archivo = new File("datos.txt");
 
         // Verificar si el archivo existe
         if (archivo.exists()) {
@@ -33,7 +33,7 @@ public class EjemploClaseFile {
         }
 
         // Crear un directorio
-        File directorio = new File("micarpeta");
+        File directorio = new File("logs");
 
         // Verificar si el directorio existe
         if (!directorio.exists()) {
