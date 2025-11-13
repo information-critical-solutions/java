@@ -1,8 +1,10 @@
 package mx.up.cripto.cifrado.simetrico.aes;
 
-import javax.crypto.Cipher;                  // Para operaciones de cifrado y descifrado
-import javax.crypto.SecretKey;               // Representa la clave simétrica
+import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;      // Para reconstruir la clave desde bytes
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Base64;                     // Para codificar y decodificar en Base64
 import org.apache.logging.log4j.LogManager;  // LogManager de log4j2
 import org.apache.logging.log4j.Logger;      // Logger de log4j2
@@ -28,27 +30,37 @@ public class AESCifradoUtil {
             byte[] llaveBytes = Base64.getDecoder().decode(llaveBase64);
             SecretKey claveSecreta = new SecretKeySpec(llaveBytes, "AES");
 
-            // ---------- CIFRADO ----------
-            Cipher cifrador = Cipher.getInstance("AES"); // Creamos instancia AES
-            cifrador.init(Cipher.ENCRYPT_MODE, claveSecreta); // Inicializamos en modo cifrado
-
-            byte[] textoCifrado = cifrador.doFinal(textoOriginal.getBytes("UTF-8")); // Ciframos
-            String textoCifradoBase64 = Base64.getEncoder().encodeToString(textoCifrado); // Codificamos en Base64
+            String textoCifradoBase64 = cifrar(textoOriginal, claveSecreta);
 
             logger.info("Texto cifrado (Base64): {}", textoCifradoBase64);
 
-            // ---------- DESCIFRADO ----------
-            Cipher descifrador = Cipher.getInstance("AES"); // Otra instancia de AES
-            descifrador.init(Cipher.DECRYPT_MODE, claveSecreta); // Inicializamos en modo descifrado
-
-            byte[] textoDescifradoBytes = descifrador.doFinal(Base64.getDecoder().decode(textoCifradoBase64)); // Desciframos
-            String textoDescifrado = new String(textoDescifradoBytes, "UTF-8"); // Convertimos a String
+            String textoDescifrado = descifrar(claveSecreta, textoCifradoBase64);
 
             logger.info("Texto descifrado: {}", textoDescifrado);
 
         } catch (Exception e) {
             logger.error("Error en el cifrado/descifrado: {}", e.getMessage());
         }
+    }
+
+    public static String descifrar(SecretKey claveSecreta, String textoCifradoBase64) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException {
+        // ---------- DESCIFRADO ----------
+        Cipher descifrador = Cipher.getInstance("AES"); // Otra instancia de AES
+        descifrador.init(Cipher.DECRYPT_MODE, claveSecreta); // Inicializamos en modo descifrado
+
+        byte[] textoDescifradoBytes = descifrador.doFinal(Base64.getDecoder().decode(textoCifradoBase64)); // Desciframos
+        String textoDescifrado = new String(textoDescifradoBytes, "UTF-8"); // Convertimos a String
+        return textoDescifrado;
+    }
+
+    public static String cifrar(String textoOriginal, SecretKey claveSecreta) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, UnsupportedEncodingException {
+        // ---------- CIFRADO ----------
+        Cipher cifrador = Cipher.getInstance("AES"); // Creamos instancia AES
+        cifrador.init(Cipher.ENCRYPT_MODE, claveSecreta); // Inicializamos en modo cifrado
+
+        byte[] textoCifrado = cifrador.doFinal(textoOriginal.getBytes("UTF-8")); // Ciframos
+        String textoCifradoBase64 = Base64.getEncoder().encodeToString(textoCifrado); // Codificamos en Base64
+        return textoCifradoBase64;
     }
 
     // Método main para probar la utilidad
